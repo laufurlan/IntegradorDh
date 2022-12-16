@@ -1,0 +1,27 @@
+.product-card{
+  @include display-flex-creator($flex-direction: row, $justify-content: center, $align-items: flex-start);
+  transition: 0.5s;
+  .product-photo{
+    .like{
+      position: relative;
+      top: 10px;
+      right: 10px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .product-info{
+    section{
+      .product-header{
+        @include display-flex-creator($flex-direction: row, $justify-content: center, $align-items: flex-start);
+        .left{
+          @include display-flex-creator($flex-direction: column, $justify-content: flex-start, $align-items: center);
+        }
+        .right{
+          @include display-flex-creator($flex-direction: column, $justify-content: end, $align-items: center);
+        }
+      }
+    }
+  }
+}

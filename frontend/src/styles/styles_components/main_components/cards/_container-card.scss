@@ -1,0 +1,20 @@
+@import './card2';
+
+.section-recomendation{
+  @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: flex-start);
+  @include box-parameter($margin: 0, $padding: 0 30px);
+  .container-card{
+    @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: center);
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px){
+  .section-recomendation{  
+    @include box-parameter($margin: 0, $padding: 10px);
+    .container-card{
+      @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: center);
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.caracteristics{
+  background-color: #ffffff;
+  h3{
+    @include box-parameter($margin: 0, $padding: 30px);
+  }
+  .caracteristic-container{
+    @include display-flex-creator($flex-direction: column,  $justify-content: none, $align-items: flex-start);
+    @include box-parameter($margin: 0, $padding: 0 30px);
+    div{
+      @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: flex);
+      .atribute{
+        @include box-parameter($margin: 0, $padding: 30px 0);
+        @include display-flex-creator( $justify-content: flex-start, $align-items: center);
+        width: 24vw;
+        svg{
+          color: $color-principal;
+          font-size: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .caracteristics{
+    h3{
+      @include box-parameter($margin: 0, $padding: 20px 10px);
+    }
+    .caracteristic-container{
+      @include box-parameter($margin: 0, $padding: 0 10px);
+      @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: flex-start);
+      div{
+        @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: flex-start);
+        .atribute {
+          width: unset;
+        }
+      }
+    }
+  }
+}

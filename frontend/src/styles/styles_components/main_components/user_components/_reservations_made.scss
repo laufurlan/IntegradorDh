@@ -1,0 +1,50 @@
+.reservation-contain{
+  height: auto;
+  .container-list{
+    @include box-parameter($margin: 0, $padding:10px 20px);
+    @include display-flex-creator($flex-direction: row, $justify-content: flex-start, $align-items: flex-start);
+    flex-wrap: wrap;
+    .reservation-card{
+      margin: 10px;
+      width: 20%;
+      height: 450px;
+      .main-image-reservation{
+        height: 100px;
+        overflow: hidden;
+        .img{
+          @include display-flex-creator($flex-direction: row, $justify-content: center, $align-items: center);
+          height: 100px;
+          width: 100%;
+          background-color: #bebebe81;
+          svg{
+            font-size: 30px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .container-list.contain{
+    height: 83vh;
+  }
+}
+
+@media (max-width: 450px){
+  .reservation-contain{
+    height: auto;
+    .container-list{
+      @include box-parameter($margin: 0, $padding:15px);
+      @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: center);
+      flex-wrap: nowrap;
+      height: 100%;
+      .reservation-card{
+        margin: 5px;
+        padding: 20px;
+        width: 90%;
+      }
+    }
+    .container-list.contain{
+      height: 64vh;
+    }
+  }
+}

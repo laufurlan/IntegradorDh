@@ -1,0 +1,35 @@
+@import '../styles_general_components/card_category';
+
+.category{
+  @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: flex-start);
+  @include box-parameter($margin:0, $padding: 10px 30px) ;
+  background-color: #ffffff;
+  width: -webkit-fill-available;
+  h2{
+    color: $color-secundary;
+  }
+  .card-container{
+    @include display-flex-creator($justify-content: space-between);
+    @include card-especification($back-color: #ffffff, $color: $color-neutral, $border-radius: 0, $padding: 0);
+    width: 96vw;
+    align-self: center;
+  }
+}
+@media (max-width: 600px){
+  .category{
+    
+  .card-container{
+    display: block;
+  }
+}
+}
+
+@media (max-width: 400px){
+  .category{
+    @include box-parameter($margin:0, $padding: 10px) ;
+    .card-container{
+      @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: normal);
+      width: 100%;
+    }
+  }
+}

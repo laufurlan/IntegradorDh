@@ -1,0 +1,125 @@
+.header-avatar{
+  @include display-flex-creator($justify-content: space-between);
+  position: relative;
+  div{
+    @include display-flex-creator($justify-content: space-between);
+    .user-role{
+      @include display-flex-creator($justify-content: space-between);
+      a{
+        @include button($back-color: transparent, $color: $color-secundary, $border: transparent, $width: auto);
+        font-weight: 700;
+        font-size: 16px;
+        margin-right: 10px;
+        text-decoration: none;
+        transition: 0.5s;
+        padding: 0 10px;
+      }
+      a:hover{
+        color: #ffffff;
+        background-color: $color-secundary;
+      }
+      .divider{
+        height: 40px;
+        width: 1px;
+        background-color: $color-principal;
+      }
+    }
+    
+  .avatar{
+    @include display-flex-creator($flex-direction: row);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $color-secundary;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 10px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+  .avatar-info{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between,$align-items: flex-start);
+    height: 40px;
+    span{
+      color: $color-neutral;
+    }
+    p{
+      color: $color-principal;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+    }  
+  }
+}
+  .quit-button{
+    @include button($back-color: transparent, $color: $color, $border: none, $width: auto);
+    position: absolute;
+    right: 0;
+    top: -15px;
+    cursor: pointer;
+  }
+}
+.burger-style-header-avatar{
+  @include display-flex-creator($flex-direction: column, $justify-content: space-between,$align-items: flex-end);
+  height: 100%;
+  div{
+  padding: 10px;
+  @include display-flex-creator($flex-direction: column, $justify-content: flex-end,$align-items: flex-end);
+  .user-role{
+    @include display-flex-creator($flex-direction: column, $justify-content: flex-end,$align-items: flex-end);
+    a{
+      @include button($back-color: transparent, $color: $color-secundary, $border: transparent, $width: auto);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 0;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    .divider{
+      padding: 1px;
+      width: 100px;
+      background-color: $color-principal;
+    }
+  }
+  .avatar{
+    @include display-flex-creator($flex-direction: row);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $color-neutral;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #ffffff;
+    overflow: hidden;
+      img{
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  .burger-style-avatar-info{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between,$align-items: flex-end);
+    height: 40px;
+    margin: 0 0 15px 0;
+    span{
+      color: $color-neutral;
+    }
+    p{
+      color: $color-principal;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+    }  
+  }
+}
+  p{
+    @include display-flex-creator($flex-direction: row, $justify-content: flex-end,$align-items: center);
+    .quit-button{
+      @include button($back-color: transparent, $color: $color-principal, $border: none, $width: auto);
+    }
+  }
+  
+}

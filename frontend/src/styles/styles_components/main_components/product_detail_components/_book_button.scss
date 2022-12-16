@@ -1,0 +1,44 @@
+.book-button {
+  @include card-especification($back-color: #ffffff, $color:$typography, $border-radius:10px, $padding: 0 10px);
+
+  @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: normal);
+  @include box-parameter($margin: 0, $padding: 10px);
+  width: 30%;
+  box-shadow: $box-shadow;
+  h4{
+    @include box-parameter($margin: 0, $padding: 10px);
+    align-self: center;
+    font-size: 18px;
+  }
+  div{
+    @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: flex-start);
+    @include box-parameter($margin: 0, $padding: 10px);
+    h5{
+      @include box-parameter($margin: 0, $padding: 0);
+      color: $color-principal;
+      font-size: 16px;
+    }
+    .checkout{
+      @include display-flex-creator($flex-direction: column, $justify-content: normal, $align-items: flex-end);
+
+    }
+  }
+  
+  button { 
+    @include button($back-color: $color-principal, $color: #ffffff , $border: $color-principal solid 1px, $width: auto);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    transition: 0.5s;
+  }
+  button:hover{
+    background-color: #ffffff;
+    color: $color-principal;
+    border: 1px solid $color-principal;
+  }
+}
+@media (max-width: 600px){
+  .book-button {
+    width: unset;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,55 @@
+.back-burger-menu{
+  @include card-especification($back-color: $color-neutral-atenuated, $color:$color, $border-radius:0, $padding: 0);
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  .burger-menu{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+    background-color: #ffffff;
+    padding: 10px;
+    width: 70%;
+    height: 97%;
+    .header-burger-menu{
+      @include display-flex-creator($flex-direction: column, $justify-content: flex-end, $align-items: flex-end);
+      position: relative;
+      .quit-button{
+        @include button($back-color: transparent, $color: $color, $border: none, $width: auto);
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        z-index: 3;
+      }
+    }
+    ul{
+      @include display-flex-creator($flex-direction: column, $justify-content: flex-start, $align-items: flex-end);
+      @include box-parameter($margin: 0, $padding: 0);
+      list-style: none;
+      height: 100%;
+      li{
+        a{
+          text-decoration: none;
+          button{
+            @include box-parameter($margin: 0, $padding: 0);   
+            @include button($back-color: #ffffff, $color: $color, $border: none, $width: 100%);
+          }
+        }    
+      }
+      
+    }
+    nav{
+      ul{
+        @include display-flex-creator($flex-direction: row, $justify-content: flex-end, $align-items: center);
+        li{
+          margin-left: 5px;
+        }
+      }
+    }   
+  }
+  .underline{
+    border: $color-principal solid 1px;
+    width: 100%;
+  }
+}

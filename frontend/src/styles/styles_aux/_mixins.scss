@@ -1,0 +1,42 @@
+@mixin display-flex-creator($flex-direction: row, $justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin card-especification($back-color: $color-principal, $color:$typography-light, $border-radius:0, $padding: 0 10px){
+  background-color: $back-color;
+  color: $color;
+  border-radius: $border-radius;
+  padding: $padding;
+}
+@mixin box-parameter($margin: 0 0 10px 0, $padding: 0){
+  margin: $margin;
+  padding: $padding;
+}
+@mixin button($back-color: $color-back, $color: $color-principal, $border: $color-principal solid 1px, $width: auto){
+  height: 40px;
+  width: $width;
+  @include display-flex-creator();
+  border-radius: $border-radius;
+  background-color: $back-color;
+  color: $color;
+  border: $border;
+}
+@mixin position($position: absolute, $z-index: 1){  
+  position: $position;
+  z-index: $z-index;
+}
+@mixin input($width: 40%, $padding: 0 10px, $margin-right: 20px, $background-color: $color-back){
+  margin-right: $margin-right;
+  padding: $padding;
+  height: 40px;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  border: none;
+}
+@mixin calendarDaySelector($background-color: $principal-color-attenuated, $border-radius: 50%, $color: $typography-light){
+  background-color: $background-color;
+  border-radius: $border-radius;
+  color: $color;
+}

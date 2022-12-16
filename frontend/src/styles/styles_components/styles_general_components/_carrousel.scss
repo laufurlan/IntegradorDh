@@ -1,0 +1,62 @@
+.carrousel-container{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+
+  .carrousel-item{
+    height: 20rem;
+    min-width: 100%;
+    width: 100%;
+    transition: all ease 0.5s;
+    @include display-flex-creator($flex-direction: row, $justify-content: center, $align-items: center);
+    
+    img{
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  button{
+    @include button($back-color: transparent, $color: $color-secundary, $border: none, $width: auto);
+    position: absolute;
+    transition: 0.5s;
+    z-index: 2;
+    svg{
+      font-size: 20px;
+    }
+  }
+  .exit-button{
+    top: 5px;
+    right: 5px;
+  }
+  .prev-button{
+    top: 50%;
+    left: 5px;
+    svg{
+      color: $color-secundary;
+    }
+  }
+  .next-button{
+    top: 50%;
+    right: 5px;
+      color: $color-secundary;
+  }
+  button:hover{
+    background-color: #ffffffb3;
+  }
+  
+}
+
+@media (max-width: 400px){
+  .carrousel-container{
+  
+    .carrousel-item{
+      height: 20vh;
+    }
+    .exit-button{
+      display: none;
+    }    
+  }
+  
+}

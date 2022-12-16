@@ -1,0 +1,29 @@
+.modal-container{
+  @include display-flex-creator($justify-content: center,  $align-items: center);
+  background-color: $color-neutral-atenuated;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  top: 1px;
+  .product-images-modal{
+    @include display-flex-creator($flex-direction: column, $justify-content: center,  $align-items: none);
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 40vw;
+    span{
+      align-self: center;
+    }
+    .secondary-images-container{
+      @include display-flex-creator($justify-content: space-between,  $align-items: none);
+      div{
+        width: 25%;
+        @include box-parameter($margin: 0, $padding: 10px);
+        img{
+          width: 100%;
+        }
+      }
+      
+    }
+  }
+}

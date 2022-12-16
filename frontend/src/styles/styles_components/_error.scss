@@ -1,0 +1,41 @@
+@import "./main_components/administration_components/add_product_card_call_to_action";
+
+.error-page{
+  @include display-flex-creator($flex-direction: row, $justify-content: center, $align-items: center);
+  height: 100vh;
+  width: 100vw;
+  .message{
+    @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: center);
+    svg{
+      font-size: 100px;
+      color: $color-principal;
+    }
+    img{
+      width: 100%;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.875);
+    }
+    a{
+      font-size: 18px;
+      font-weight: 700;
+      color: $color-principal;
+      text-decoration: none;
+    }
+  }
+}
+
+  @media (max-width: 400px){
+    .error-page{
+      .message{
+     
+        img{
+          width: 90%;
+        }
+  
+      }
+    }
+    
+  }

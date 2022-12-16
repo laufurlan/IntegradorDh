@@ -1,0 +1,80 @@
+.form-container{
+  @include display-flex-creator($flex-direction: column,  $justify-content: center, $align-items: flex-start);
+  @include box-parameter($margin: 0, $padding: 0);
+  width: 75%;
+  .user-reservation-info{
+    width: 100%;
+    .user-info-form{
+      @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: normal);
+      @include card-especification($back-color: #ffffff, $color: $color, $border-radius: 10px, $padding: 10px);
+       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      
+      section{
+        @include display-flex-creator($flex-direction: row,  $justify-content: space-around, $align-items: center);
+        @include box-parameter($margin: 0, $padding: 5px);
+        label{
+          width: 100%;
+          input{
+            @include input($width: 100%, $padding: 0 10px, $margin-right: 0, $background-color: $color-back);
+            display: block;
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+  .reservation-calendar{
+    width: 100%;
+
+  }
+  .time-arrival-select{
+    width: 100%;
+    div{
+      @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: flex-start);
+      @include card-especification($back-color: #ffffff, $color: $color, $border-radius: 10px, $padding: 10px);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      label{
+        width: 50%;
+        select{
+          @include input($width: 100%, $padding: 0 10px, $margin-right: 0, $background-color: $color-back);
+          margin: 10px 0;
+          display: block;
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  section{
+    h2{
+      margin: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .form-container{
+    width: 100%;
+    .user-reservation-info{
+      width: 100%;
+      .user-info-form{
+        @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: normal);
+        @include card-especification($back-color: #ffffff, $color: $color, $border-radius: 10px, $padding: 10px);
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        
+        section{
+          @include display-flex-creator($flex-direction: column,  $justify-content: space-around, $align-items: center);
+          @include box-parameter($margin: 0, $padding: 5px);
+          label{
+            width: 100%;
+            input{
+              @include input($width: 100%, $padding: 5px, $margin-right: 0, $background-color: $color-back);
+              display: block;
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

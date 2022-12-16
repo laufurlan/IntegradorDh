@@ -1,0 +1,85 @@
+.select{
+  @include display-flex-creator($flex-direction: column,$justify-content: flex-start, $align-items: center);
+  @include card-especification($back-color: $color-back, $color:$color, $border-radius:0 0 5px 5px, $padding: 0 10px);
+  margin-top: 5px;
+  box-shadow: $box-shadow;
+  max-height: 200px;
+  overflow: scroll;
+  position: relative;
+  z-index: 1;
+    .option{
+      @include display-flex-creator($flex-direction: column,$justify-content: flex-start, $align-items: flex-start);
+      width: 100%;
+      transition: 0.5s;
+      a{
+        @include display-flex-creator($justify-content: flex-start, $align-items: flex-start);
+        margin: 5px 0;
+        text-decoration: none;
+        width: 100%;
+        .logo{
+          @include box-parameter($margin: 0, $padding: 10px);
+          color: $color-neutral;
+          font-size: 23px;
+        }
+        section{
+          @include display-flex-creator($flex-direction: column, $align-items: flex-start);
+          h3{
+            font-size: 16px;
+            color: $color-neutral;
+            margin: 0;
+          }      
+          span{
+            font-size: 14px;
+            color: $color-neutral;
+          }
+          
+        }
+      }
+    
+    .line{
+      height: 1px;
+      width: 100%;
+      background-color: $color-principal;
+    }
+  }
+  .option:hover{
+    background-color: $color-neutral-atenuated;
+    a{
+      .logo{
+        color: #ffffff;
+      }
+      section{
+        h3{
+          color: #ffffff;
+        }
+        span{
+          color: #ffffff;
+        }
+      }
+  }
+    }
+}
+ul::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+ul::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+ul::-webkit-scrollbar-button:increment,ul::-webkit-scrollbar-button {
+    display: none;
+} 
+
+ul::-webkit-scrollbar:horizontal {
+    height: 0;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: $color-neutral;
+    border-radius: 20px;
+}
+
+ul::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

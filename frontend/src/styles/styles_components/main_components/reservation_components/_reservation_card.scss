@@ -1,0 +1,87 @@
+
+.reservation-card{
+  @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: normal);
+  @include box-parameter($margin: 45px 0 0 30px, $padding: 30px);
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 20%;
+  h2{
+    margin: 0;
+  }
+  .main-image-reservation{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .title-and-stars{
+    @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: flex-start);
+    span{
+      color: $color-neutral-atenuated;
+      font-weight: 700;
+    }
+    h3{
+      margin: 5px 0;
+      font-size: 22px;
+      color: $color-neutral;
+    }
+    ul{
+      @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: center);
+      @include box-parameter($margin: 0, $padding: 0);
+      list-style: none;
+      li{
+        @include box-parameter($margin: 0, $padding: 0); 
+        svg{
+          color: $color-principal;
+        }
+      }
+    }
+  }
+  .product-location{
+    @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: center);
+    font-size: 16px;
+    svg{
+      font-size: 20px;
+      padding: 0 5px 0 0;
+    }
+    .location-info{
+      p{
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+    
+  }
+  .check-in-check-out{
+    @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: center);
+    @include box-parameter($margin: 0, $padding: 10px 0);
+    color: rgba(0, 0, 0, 0.869);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  button{
+    @include button($back-color: $color-principal, $color: #ffffff, $border: none, $width: auto);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #ffffff;
+    color: $color-principal;
+    border: 1px solid $color-principal;
+  }
+  .underline{
+    @include box-parameter($margin: 5px 0, $padding: 0);
+    border: $color-neutral-atenuated solid 1px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px){
+  .reservation-card{
+  @include box-parameter($margin: 10px 0, $padding: 10px);
+
+    width: unset;
+  }
+}

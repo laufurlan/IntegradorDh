@@ -1,0 +1,94 @@
+.modal-background{
+  @include display-flex-creator($justify-content: center,  $align-items: center);
+  background-color: $color-neutral-atenuated;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  .succes-reservation{
+    @include display-flex-creator($flex-direction: column, $justify-content: center,  $align-items: center);
+    @include box-parameter($margin: 0, $padding: 20px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 30%;
+    svg{
+      font-size: 100px;
+      color: $color-principal;
+    }
+    h1{
+      color: $color-principal;
+      margin: 0 10px;
+    }
+    p{
+      font-weight: 700;
+    }
+    a{
+      @include button($back-color: $color-principal, $color: #ffffff, $border: $color-principal solid 1px, $width: 30%);
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    a:hover{
+      background-color: #ffffff;
+      color: $color-principal;
+    }
+    button{
+      @include button($back-color: $color-principal, $color: #ffffff, $border: $color-principal solid 1px, $width: 30%);
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    button:hover{
+      background-color: #ffffff;
+      color: $color-principal;
+    }
+    .yes-no{
+    @include display-flex-creator($flex-direction: row, $justify-content: space-between,  $align-items: center);
+    width: 100%;  
+    button{
+        @include button($back-color: $color-principal, $color: #ffffff, $border: $color-principal solid 1px, $width: 30%);
+        text-decoration: none;
+        transition: 0.5s;
+      }
+      button:hover{
+        background-color: #ffffff;
+        color: $color-principal;
+      }
+      .secundary{
+        @include button($back-color: #ffffff, $color: $color-principal, $border: $color-principal solid 1px, $width: 30%);
+        text-decoration: none;
+        transition: 0.5s;
+      }
+      
+    }
+  }
+}
+
+@media (max-width: 900px){
+  .modal-background{
+    .succes-reservation{
+      width: 50%;
+      button{
+        @include button($back-color: $color-principal, $color: #ffffff, $border: none, $width: 40%);
+      }
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .modal-background{
+    .succes-reservation{
+      width: 70%;
+      h1{
+        font-size: 16px;
+        margin: 0;
+      }
+      p{
+        font-size: 15px;
+      }
+      a{
+        @include button($back-color: $color-principal, $color: #ffffff, $border: none, $width: 50%);
+      }
+    }
+  }
+}

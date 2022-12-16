@@ -1,0 +1,62 @@
+.add-product-call-to-action{
+  @include card-especification($back-color: #ffffff, $color: $color, $border-radius: 10px, $padding: 10px);
+  @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: center);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  width: 23vw;
+  svg{
+    font-size: 100px;
+    color: $color-principal;
+  }
+  h4{
+    font-weight: 700;
+    font-size: 16px;
+  }
+  section{
+    @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: center);
+    width: 100%;
+    a{
+      @include button($back-color: #ffffff, $color: $color-principal, $border: $color-principal solid 1px, $width: auto);
+      font-weight: 700;
+      margin: 5px;
+      padding: 5px;
+      width: 100%;
+      text-decoration: none;
+      justify-self: center;
+      cursor: pointer;
+      text-align: center;
+      width: 50%;
+      transition: 0.5s;
+    }
+    .call-to-action{
+      background-color: $color-principal;
+      color: #ffffff;
+      svg{
+        font-size: 30px;
+        color: #ffffff;
+      }
+    }
+    .call-to-action:hover{
+      background-color: #ffffff;
+      color: $color-principal;
+      svg{
+        color: $color-principal;
+      }
+    }
+  }
+}
+@media (max-width: 1000px){
+  .add-product-call-to-action{
+    width: 30vw;
+    section{
+      @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: center);
+    }
+  }
+}
+@media (max-width: 600px){
+  .add-product-call-to-action{
+    width: 90vw;
+    section{
+      @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: center);
+    }
+  }
+}

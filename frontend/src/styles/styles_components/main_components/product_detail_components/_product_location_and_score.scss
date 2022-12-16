@@ -1,0 +1,56 @@
+.product-location-and-score{
+  @include display-flex-creator($flex-direction: row, $justify-content: space-between);
+  @include card-especification($back-color: #fafafa, $color:$color, $border-radius:0, $padding: 10px 30px);
+  .product-location{
+    @include display-flex-creator($flex-direction: row, $align-items: center);
+    svg{
+      font-size: 25px;
+      color: $color-neutral;
+    }
+    .location-info{
+      @include display-flex-creator($flex-direction: column, $align-items: flex-start);
+      p{
+        margin: 0;
+      }
+    }
+  }
+  .product-score{
+    @include display-flex-creator($flex-direction: row);
+    font-weight: 700;     
+    section{
+      @include display-flex-creator($flex-direction: column, $align-items:flex-end);
+      color: $color-secundary;
+      font-size: 16px;
+      svg{
+        color: $color-principal;
+      }
+    }
+    .product-number-score{
+      @include display-flex-creator($flex-direction: column); 
+      @include card-especification($back-color: $color-secundary, $color:$typography-light, $border-radius:10px, $padding: 0);
+      height: 35px;
+      width: 35px;
+      margin-left: 5px;
+    }
+  }
+}
+@media (max-width: 450px){
+  .product-location-and-score{
+    padding: 10px;
+    .product-location{
+      svg{
+        font-size: 30px;
+      }
+      .location-info{
+        span{
+          display: none;
+        }
+      }
+    }
+    .product-score{  
+      width: -webkit-fill-available;
+      @include display-flex-creator($flex-direction: row, $justify-content: flex-end);
+    }
+  }
+  
+}

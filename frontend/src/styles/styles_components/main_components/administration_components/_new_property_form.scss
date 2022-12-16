@@ -1,0 +1,168 @@
+.add-property-form{
+  @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+  @include box-parameter($margin: 0, $padding: 10px 30px);
+  box-shadow: 0px 1px 5px 0px #00000026;
+  .info-property-form{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 1px 5px 0px #00000026;
+    section{
+      @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: normal);
+      width: 100%;
+      label{
+        @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+        padding: 0 5px;
+        input{
+          @include input($width: 40%, $padding: 0 10px, $margin-right: 0, $background-color: #ffffff);
+          box-shadow: 0px 1px 5px 0px #00000026;
+        }
+        select{
+          @include input($width: 40%, $padding: 0 10px, $margin-right: 0, $background-color: #ffffff);
+          box-shadow: 0px 1px 5px 0px #00000026;
+        }
+      }
+      .description{
+        width: 99%;
+      }
+    }
+    label{
+      @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+      width: 100%;
+      padding: 5px;
+      border-radius: 10px;
+      textarea{
+        @include input($width: unset, $padding: 0 10px, $margin-right: 0, $background-color: #ffffff);
+        box-shadow: 0px 1px 5px 0px #00000026;
+          height: 80px;
+      }
+    }
+  }
+  .atributtes-form{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+    section{
+      @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: flex-end);
+      background-color: #bebebe81;
+      border-radius: 10px;
+      padding: 30px 15px;
+      box-shadow: 0px 1px 5px 0px #00000026;
+      label{
+        @include display-flex-creator($flex-direction: row, $justify-content: flex-start, $align-items: center);
+        @include display-flex-creator($flex-direction: row, $justify-content: flex-start, $align-items: center);
+        padding: 0 5px;
+        font-size: 18px;
+        cursor: pointer;
+        svg{
+          font-size: 16px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .segurity-policy-forms{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+    div{
+      @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: normal);
+      border-radius: 10px;
+      box-shadow: 0px 1px 5px 0px #00000026;
+      padding: 15px;
+      section{
+        @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: flex-start);
+        width: 33%;
+        padding: 5px;
+        textarea{
+          @include input($width: 100%, $padding: 0 10px, $margin-right: 0, $background-color: #ffffff);
+          box-shadow: 0px 1px 5px 0px #00000026;
+          height: 100px;
+          width: 90%;
+          width: 90%;
+        }
+      }
+    }
+  }
+  .images-form{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+    div{
+      @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: flex-end);
+      background-color: #bebebe81;
+      background-color: #bebebe81;
+      border-radius: 10px;
+      padding: 30px 15px;
+      box-shadow: 0px 1px 5px 0px #00000026;
+      label{
+        @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+        @include button($back-color: #ffffff, $color: $color-principal, $border: $color-principal solid 1px, $width: auto);
+        @include button($back-color: #ffffff, $color: $color-principal, $border: $color-principal solid 1px, $width: auto);
+        padding: 0 5px;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.5s;
+        cursor: pointer;
+        transition: 0.5s;
+        input{
+          display: none;
+        }          
+      }
+      label:hover{
+        box-shadow: 0px 1px 5px 0px #00000026;
+      }
+      .load{
+        background-color: $color-principal;
+        color: #ffffff;
+        box-shadow: 0px 1px 5px 0px #00000026;
+      }
+    }
+  }
+  .complementary-images{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+    div{
+      @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: flex-end);
+      border-radius: 10px;
+      padding: 30px 10px;
+      box-shadow: 0px 1px 5px 0px #00000026;
+      label{
+        @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: normal);
+        @include button($back-color: #ffffff, $color: $color-principal, $border: $color-principal solid 1px, $width: auto);
+        margin: 0 5px;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.5s;
+          input{
+            display: none;
+          }
+      }
+      label:hover{
+        box-shadow: 0px 1px 5px 0px #00000026;
+      }
+      .load{
+        background-color: $color-principal;
+        color: #ffffff;
+        box-shadow: 0px 1px 5px 0px #00000026;
+      }
+    }
+  }
+  .create-product-button{
+    margin: 30px 25%;
+    @include button($back-color: $color-principal, $color: #ffffff, $border: $color-principal solid 1px);
+    margin: 30px 25%;
+    @include button($back-color: $color-principal, $color: #ffffff, $border: $color-principal solid 1px);
+    align-self: center;
+    box-shadow: 0px 1px 5px 0px #00000026;
+    box-shadow: 0px 1px 5px 0px #00000026;
+    width: 50%;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .create-product-button:hover{
+    background-color: #ffffff;
+    color: $color-principal;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .create-product-button:hover{
+    background-color: #ffffff;
+    color: $color-principal;
+  }
+}

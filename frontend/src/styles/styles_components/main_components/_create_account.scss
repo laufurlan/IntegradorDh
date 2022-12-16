@@ -1,0 +1,134 @@
+.sign-in-form{
+  @include display-flex-creator();
+  height: 100vh;
+  form{
+    @include display-flex-creator($flex-direction: column, $justify-content: space-between, $align-items: none);
+    width: 40%;
+    h2{
+      color: $color-principal;
+      font-size: $size-heading1;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+    }
+    .form-inputs{
+      @include display-flex-creator($flex-direction: column, $justify-content: space-evenly, $align-items: none);
+      .name-surname{
+        @include display-flex-creator($flex-direction: row, $justify-content: space-between, $align-items: center);
+        div{
+          @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: flex-start);
+          .input{
+            font-size: 12px;
+            input{
+              @include input( $padding: 0 10px, $margin-right: 0, $background-color: #ffffff);
+              margin: 10px 0 0 0;
+              box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+            }
+          }
+        }
+        .surname{
+          align-items: flex-end;
+          .input{
+            text-align: left;
+          }
+        }
+      }
+      .input{
+        font-size: 12px;
+        display: contents;
+        input{
+          @include input( $padding: 0 10px, $margin-right: 0, $background-color: #ffffff);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+    
+    .submit-buttons{
+      @include display-flex-creator( $justify-content: center, $align-items: center);
+      @include box-parameter($margin: 0, $padding: 20px 0 0 0);
+      ul{
+       @include display-flex-creator($flex-direction: column,$justify-content: space-between, $align-items: none);
+       @include box-parameter($margin: 0);
+       height: 7vh;
+        list-style: none;
+        li{
+          font-size: 12px;
+          button{
+            @include button($back-color: $color-principal, $color: $typography-light, $border: $color-principal solid 1px, $width: 100%);
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+            text-decoration: none;
+            cursor: pointer;
+
+          }
+          button:hover{
+            background-color: #ffffff;
+            color: $color-principal;
+            border: 1px solid $color-principal;
+          }
+          link{
+            text-decoration: none;
+            color: #4285F4;
+          }
+        }
+      }
+    }
+    
+  }
+}
+@media (max-width: 700px){
+  .sign-in-form{
+    form{
+      @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: center);
+      width: 80%;
+      .form-inputs{
+        .name-surname{
+          @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: center);
+          .surname{
+            align-items: flex-start;
+          }
+        }
+      .submit-buttons{
+        ul{
+          width: 100%;
+          height: 10vh;
+
+        }
+        .secundary-action{
+          align-self: center;
+
+        }
+      }
+    }
+  }
+} 
+}
+
+@media (max-width: 400px){
+  .sign-in-form{
+    form{
+      @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: center);
+      width: 80%;
+      .form-inputs{
+        .name-surname{
+          @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: flex-start);
+          .surname{
+            align-items: flex-start;
+          }
+        }
+      .submit-buttons{
+        ul{
+          width: 100%;
+          height: 10vh;
+        }
+        .secundary-action{
+          align-self: center;
+
+        }
+      }
+    }
+  }
+}
+}

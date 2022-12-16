@@ -1,0 +1,46 @@
+.card-category{
+  @include box-parameter($margin: 0 10px, $padding: 0);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  width: 25%;
+  transition: 0.5s;
+  cursor: pointer;
+  section{
+    img{
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+    }
+  }
+  .category-info{
+    @include card-especification($back-color:#ffffff, $color: $color, $border-radius: 10px, $padding: 10px);
+    h3{
+      @include box-parameter($margin: 0);
+      color: $color-secundary;
+    }
+    p{
+      @include box-parameter($margin: 0);
+      color: #545776be;
+      font-size: 12px;
+    }
+  }
+}
+.card-category:hover{
+  transform: translate(0,-5px);
+  box-shadow: 0px 1px 5px $color-secundary;
+}
+@media (max-width: 600px){
+  .card-category{
+
+    width: 45%;
+    margin: 5px;
+    
+  }
+}
+@media (max-width: 450px){
+  .card-category{
+    margin: 10px 0;
+    width: unset;
+  }
+}

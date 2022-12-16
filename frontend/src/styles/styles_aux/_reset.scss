@@ -1,0 +1,15 @@
+body{
+  font-family: $typography;
+  font-weight: $typography-normal;
+  background-color: #fafafa;
+  margin: 0;
+  height: 100vh;
+  width: auto;
+  #root{
+    height: 100vh;
+    .app{
+    @include display-flex-creator($flex-direction: column, $justify-content: flex-start, $align-items: none);
+      height: 100vh;
+    }
+  }
+}

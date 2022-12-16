@@ -1,0 +1,94 @@
+@import '../styles_general_components/calendar';
+
+.buscador{
+  @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: center);
+  @include card-especification($back-color: $color-secundary, $color: $typography-light);
+  @include box-parameter($margin: 0, $padding: 30px 10px);
+ .form{
+    @include display-flex-creator($flex-direction: row, $justify-content: center, $align-items: center);
+    width: 100%;
+    .input{
+      @include input( $padding: 0 10px);
+      width: 35%;
+      input{
+        @include box-parameter($margin: 0, $padding: 0 0 0 5px);
+        width: 100%;
+        font-size: $size-texto1;
+        color: #545776be;
+      }
+    }
+    .react-datepicker-wrapper{
+      @include input();
+      width: 35%;
+      .react-datepicker__input-container{
+        width: 100%;
+        .input{
+          padding: 0 10px;
+          font-size: $size-texto1;
+          color: #545776be;
+          width: 90%;
+        }
+        .react-datepicker-ignore-onclickoutside{
+          width: 95%;
+        }
+      }
+    }
+    .submit{
+      @include button($back-color: $color-principal, $color: $typography, $border: none);
+      font-weight: 300;
+      font-size: $size-texto1;
+      color: $color-back;
+      width: 12%;
+      transition: 0.5s;
+      cursor: pointer;
+
+    }
+    .submit:hover{
+      background-color: #ffffff;
+      color: $color-principal;
+      border: 1px solid $color-principal;
+    }
+  }
+}
+@media (max-width: 600px){
+  .buscador{
+    @include box-parameter($margin: 0, $padding: 10px);
+    .form{
+      @include display-flex-creator($flex-direction: column, $justify-content: center, $align-items: normal);
+      width: 100%;
+      .input{
+        @include input( $padding: 0);
+        width: 99%;
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: $size-texto2;
+
+      }
+      .react-datepicker-wrapper{
+        @include input();
+        width: 94%;
+        margin-right: 0;
+        margin-bottom: 5px;
+
+        .react-datepicker__input-container{
+          width: 95%;
+          .react-datepicker-ignore-onclickoutside{
+            margin-right: 0;
+            margin-bottom: 5px;
+            font-size: $size-texto2;
+
+          }
+        }
+      }
+      .submit{
+      @include button($back-color: $color-principal, $color: $typography, $border: none);
+      width: 100%;
+        margin-bottom: 5px;
+        font-size: $size-texto2;
+      }
+    }
+    h1{
+      text-align: center;
+    }
+  }
+}

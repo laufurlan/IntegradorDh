@@ -1,0 +1,68 @@
+@import './product_detail_components/product_images_modal';
+@import './product_detail_components/product_security_policy';
+@import './product_detail_components/product_title_and_back_button';
+@import './product_detail_components/product_location_and_score';
+@import './product_detail_components/product_info';
+@import './product_detail_components/product_caracteristics';
+@import './product_detail_components/book_button';
+
+
+
+
+
+.product-detail{
+  @include display-flex-creator($flex-direction: column, $align-items: none);
+  
+ 
+  .image{
+    @include display-flex-creator($flex-direction: column,  $justify-content: center, $align-items: center);
+    @include box-parameter($margin: 0, $padding: 30px);
+    img {
+      width: 100%;
+    }
+
+  }
+
+  .booking{
+    @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: center);
+    @include box-parameter($margin: 0, $padding: 30px);
+    background-color: #ececef;
+    .react-datepicker{
+      @include card-especification($color: rgba(0, 0, 0, 0.87), $border-radius: 0, $padding: 10px);
+      background-color: #ffffff;
+    }
+  }
+  
+    
+
+  img{
+    border-radius: 10px;
+  }
+  .underline{
+    border: $color-principal solid 1px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px){
+  .product-detail{ 
+    .image{
+      @include box-parameter($margin: 0, $padding: 10px);
+    }
+    .booking{
+      @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: normal);
+    @include box-parameter($margin: 0, $padding: 5px);
+    div{
+      .book-button{
+      width: unset;
+      margin-top: 10px;
+     }
+    }
+     
+      .react-datepicker{
+        width: unset;
+        margin: 0;
+      }
+    }
+  }
+}

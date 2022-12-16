@@ -1,0 +1,74 @@
+.product-info{
+  @include card-especification($back-color: #ffffff, $color:$color, $border-radius:0, $padding: 10px 30px);
+  .booking-share-button{
+    @include card-especification($back-color: transparent, $color:$color-neutral, $border-radius:0, $padding: 10px 0);
+    svg{
+     font-size: 25px;
+     margin-right: 5px;
+     cursor: pointer;
+    }
+  }
+  .product-images{
+    @include display-flex-creator($flex-direction: row, $justify-content: space-between,  $align-items: normal);
+    height: 30vh;
+    .principal-photo{
+      width: 50%;
+      overflow: hidden;
+      border-radius: 10px;
+      img{
+        width: 100%;
+      }
+    }
+    .more-photos{
+      @include display-flex-creator($flex-direction: column, $justify-content: space-around, $align-items: normal);
+      width: 49%;
+      div{
+        @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: space-between);
+        position: relative;
+        height: 47%;
+        img{
+          width: 49%;
+          overflow: hidden;
+        }
+        button{
+          @include button($back-color: transparent, $color: #ffffff, $border: none, $width: auto);
+          text-decoration: underline;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  article{
+    h3{
+      @include box-parameter($margin: 0, $padding: 30px 0);
+    }
+    p{
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .product-info{
+    padding: 10px;
+    .product-images{
+      .principal-photo{
+        display: none;
+      }
+      .more-photos{
+       display: none;
+      }
+      .carrousel-photo{
+        width: 100%;
+      }
+    }
+    article{
+      h3{
+        @include box-parameter($margin: 0, $padding: 20px 0);
+      }
+    }
+  }
+}

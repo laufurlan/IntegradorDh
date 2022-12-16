@@ -1,0 +1,72 @@
+.security-policy{
+    background-color: #ffffff;
+    h3{
+      @include box-parameter($margin: 0, $padding: 30px);
+    }
+    .rules-container{
+      @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: flex-start);
+      @include box-parameter($margin: 0, $padding: 0 30px 20px);
+  
+      div{
+        @include display-flex-creator($flex-direction: row,  $justify-content: space-between, $align-items: flex-start);
+        width: 50vw;
+        section{
+          @include display-flex-creator($flex-direction: column,  $justify-content: start, $align-items: flex-start);
+          @include box-parameter($margin: 0, $padding: 10px);
+          h3{
+            color: $color-secundary;
+            font-size: 16px;
+            @include box-parameter($margin: 0, $padding: 15px 0);
+          }
+          ul{
+            list-style: none;
+            @include box-parameter($margin: 0, $padding: 0);
+          }
+        }
+      }
+      section{
+        @include display-flex-creator($flex-direction: column,  $justify-content: start, $align-items: flex-start);
+        @include box-parameter($margin: 0, $padding: 10px);
+        h3{
+          color: $color-secundary;
+          font-size: 16px;
+          @include box-parameter($margin: 0, $padding: 15px 0);
+        }
+      }
+    }
+  }
+  @media (max-width: 600px){
+    .security-policy{
+      .rules-container{
+        @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: flex-start);
+        @include box-parameter($margin: 0, $padding: 15px);
+    
+        div{
+          @include display-flex-creator($flex-direction: column,  $justify-content: space-between, $align-items: flex-start);
+          width: unset;
+          section{
+            @include display-flex-creator($flex-direction: column,  $justify-content: start, $align-items: flex-start);
+            @include box-parameter($margin: 0, $padding: 10px);
+            h3{
+              color: $color-secundary;
+              font-size: 16px;
+              @include box-parameter($margin: 0, $padding: 15px 0);
+            }
+            ul{
+              list-style: none;
+              @include box-parameter($margin: 0, $padding: 0);
+            }
+          }
+        }
+        section{
+          @include display-flex-creator($flex-direction: column,  $justify-content: start, $align-items: flex-start);
+          @include box-parameter($margin: 0, $padding: 10px);
+          h3{
+            color: $color-secundary;
+            font-size: 16px;
+            @include box-parameter($margin: 0, $padding: 15px 0);
+          }
+        }
+      }
+  }
+  }
